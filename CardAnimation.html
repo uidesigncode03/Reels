@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card Animation</title>
+  </head>
+  <body>
+    <div class="cards">
+      <a href="#">
+        <div class="card">
+            
+        </div>
+      </a>
+    </div>
+  </body>
+</html>
+
+<style>
+
+/* Import font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+/* General styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #090909;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.cards{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px , 1fr));
+        gap: 35px;
+    }
+
+.card {
+  text-align: justify;
+  border: 1px solid #333;
+  width: 150px;
+  height: 180px;
+  background: url('./Images/cardCheck.png');
+  background-size: cover;
+  border-radius: 10px;
+  transform: 
+    rotate(20deg)
+    skew(-10deg, -15deg);
+  transition: 
+    translate 0.60s,
+    box-shadow 0.25s;
+}
+.card:hover {
+  translate: 0 -30px;
+  box-shadow: 
+    5px 3px rgb(30, 117, 248),
+    10px 6px rgb(55, 99, 172),
+    15px 9px rgb(39, 57, 83);
+}
+
+
+
+</style>
+
+
